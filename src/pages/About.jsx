@@ -1,24 +1,44 @@
 import React from 'react'
-import NavBar
- from '../components/NavBar'
-import fotodiri from '../assets/fotodiri.jpg';
+import { useNavigate } from 'react-router-dom';
+import Tahu2 from '../assets/Tahu2.jpg'; 
 
 const About = () => {
+  const navigate = useNavigate();
   return (
-    <>
-    <NavBar />
-    <div>
-    <div className='bg-<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div> w-full h-full'>
-    <div className="absolute top-56 left-32">
-    <h1 className="text-white text-justify text-lg p-20 w-3/5 py-2">Hi! I’m Salsabila Maharani Mumtaz, a Computer Engineering student at University of Indonesia, passionate about programming and technology. I’m constantly enhancing my skills in this area and enjoy exploring new technologies.</h1>
-    <h2 className="text-white text-justify text-lg p-20 w-3/5 py-2">Beyond technical skills, I am experienced in organizational leadership and time management, having taken on various roles that allowed me to manage teams and projects effectively. I pride myself on my strong leadership abilities and my ability to deliver results under pressure while fostering collaboration.</h2>
-    <h3 className="text-white text-justify text-lg p-20 w-3/5 py-2">I am always seeking opportunities to learn, grow, and apply my skills in new and exciting ways. My passion for programming and my commitment to personal and professional development drive me to aim for excellence in everything I do. I look forward to contributing to innovative projects, collaborating with like-minded individuals, and making an impact in the tech industry.</h3>
-    <img src={fotodiri} alt="fotodiri" className="w-90 h-96 rounded-lg absolute top-5 right-56"></img>
+    <div
+      className="relative h-screen w-screen bg-cover bg-center backdrop-blur-full"
+      style={{ backgroundImage: `url(${Tahu2})` }}>
+
+        {/* Paragraf About Us */}
+        <div className="absolute inset-40 bg-white bg-opacity-70 backdrop-blur-full rounded-full justify-center items-center">
+        <h1 className="text-yellow-700 text-2xl font-bold text-center px-6 my-14 italic">ABOUT US</h1>
+        <h2 className="text-yellow-700 text-lg text-center px-24 italic">
+          Di Tahu Bulat & Co., kami percaya bahwa camilan sederhana bisa menjadi pengalaman luar biasa. Sebagai pelopor tahu bulat modern, kami menghadirkan inovasi 
+          dengan tetap mempertahankan keaslian rasa khas Indonesia. Dengan komitmen 100% halal dan bahan-bahan berkualitas terbaik, kami memberikan produk yang tidak 
+          hanya lezat, tetapi juga aman dan terpercaya untuk dinikmati semua kalangan. Prestasi kami sebagai salah satu usaha camilan terkemuka tidak lepas dari dedikasi 
+          dalam menjaga standar kualitas dan pelayanan. Dengan penghargaan di bidang kuliner lokal, kami terus berinovasi untuk menciptakan variasi produk yang mengikuti 
+          tren tanpa melupakan akar tradisional. Kami berkomitmen untuk memberikan lebih dari sekadar tahu bulat—kami membawa kehangatan, kebersamaan, dan kepuasan di setiap 
+          gigitannya. Jadikan Tahu Bulat & Co. sebagai pilihan utama Anda untuk camilan modern yang menggugah selera : "Nikmati Raosna Tahu dengan Gaya!".
+          </h2>
+      </div>
+
+      {/* Navigasi tiap halaman */}
+      <div 
+        className="absolute top-0 left-0 w-full flex justify-center p-8 z-10 bg-opacity-100">
+        <button onClick={() => navigate('/home')} className="text-white mx-6 hover:text-xl">
+          Home
+        </button>
+        <button onClick={() => navigate('/about')} className="text-yellow-700 mx-6 hover:text-xl">
+          About
+        </button>
+        <button onClick={() => navigate('/LoginPage')} className="text-white mx-6 hover:text-xl">
+          Login
+        </button>
+        <button onClick={() => navigate('/review')} className="text-yellow-900 mx-6 hover:text-xl">
+          Review
+        </button>
+      </div>
     </div>
-    </div>
-    </div>
-    </>
   )
 }
-
 export default About

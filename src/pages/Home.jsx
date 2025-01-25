@@ -1,37 +1,49 @@
-import React, { useState, useEffect } from 'react'
-import NavBar from '../components/NavBar'
-import axios from 'axios';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Tahu2 from '../assets/Tahu2.jpg'; 
 
 const Home = () => {
-    const[data,setData] = useState([]);
+  const navigate = useNavigate();
+  const handleMenu = () => {
+    navigate('/Menu');
+  }
 
-    useEffect(() => {
-        const fetchData = async () => {
-             try {
-                const res = await axios.get('https://api.github.com/users/ksalsabilacaca');
-                setData(res.data);
-        } catch (error){
-            console.error(error);
-        }
-    }
-        fetchData();
-    },[] )
+  return (
+    <div
+      className="relative h-screen w-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${Tahu2})` }}
+    >
+      {/* Navigasi tiap halaman */}
+      <div 
+        className="absolute top-0 left-0 w-full flex justify-center p-8 z-10 bg-opacity-100">
+        <button onClick={() => navigate('/home')} className="text-white mx-6 hover:text-xl">
+          Home
+        </button>
+        <button onClick={() => navigate('/about')} className="text-yellow-700 mx-6 hover:text-xl">
+          About
+        </button>
+        <button onClick={() => navigate('/LoginPage')} className="text-white mx-6 hover:text-xl">
+          Login
+        </button>
+        <button onClick={() => navigate('/review')} className="text-yellow-900 mx-6 hover:text-xl">
+          Review
+        </button>
+      </div>
 
-    return (
-    <>
-    <NavBar />
-    <div>
-    <div className='bg-<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div> w-full h-full'>
-        <img src={data.avatar_url} alt="ksalsabilacaca's avatar" className='w-32 h-32 rounded-full absolute top-[7cm] left-[17.4cm]'/>
-        <p className='text-xl font-bold text-white italic absolute top-[10.6cm] left-[15.7cm]'>{data.name}</p>
-       <div class="grid place-items-center h-screen">
-        <p className='italic text-8xl font-bold font-italic text-white absolute top-[12cm] left-[13cm]'>Welcome !</p>
-        <p className='italic text-3xl text-white absolute top-[14.8cm] left-[11.2cm]'>Hello, I'm Salsabila and let's go to know me !</p>
+      <div 
+        className="grid place-items-center h-full">
+        <p className="italic text-8xl font-bold text-white absolute top-[7.5cm] left-[9cm]">
+        Tahu Bulat & Co.
+        </p>
+        <p className="italic text-3xl text-white absolute top-[10.5cm] left-[12.5cm]">
+        Nikmati Raosna Tahu dengan Gaya!
+        </p>
+       </div>
+        <div className="bg-white hover:bg-opacity-50 w-[3.5cm] h-[1.2cm] rounded-xl shadow-xl absolute top-[12cm] left-[17cm]">
+        <button id="MenuButton" onClick={handleMenu} className="w-[3.5cm] p-2 rounded-xl text-yellow-700 text-lg">Menu</button>
+       </div>
     </div>
-    </div>
-    </div>
-     </>
-    )
+  );
 }
 
-export default Home
+export default Home;
