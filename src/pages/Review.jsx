@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Tahu2 from '../assets/Tahu2.jpg'; 
+import home from '../assets/home.jpg'; 
 import { useEffect, useState } from "react";
 
 const Review = () => {
@@ -60,7 +60,7 @@ const Review = () => {
   return (
     <div
       className="relative h-screen w-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${Tahu2})` }}>
+      style={{ backgroundImage: `url(${home})` }}>
         
         <div className="absolute inset-20 bg-white bg-opacity-70 backdrop-blur-md rounded-xl p-6">
         <h1 className="text-yellow-700 text-2xl font-bold text-center mb-6 italic">

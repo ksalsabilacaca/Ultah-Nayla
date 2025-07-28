@@ -5,9 +5,6 @@ import Menu from "./pages/Menu";
 import Review from "./pages/Review";
 import NoPage from "./pages/NoPage";
 import About from "./pages/About";
-import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
-import Order from "./pages/Order";
 
 const App = () => {
   return (
@@ -18,9 +15,6 @@ const App = () => {
           <Route path="/Menu" element={<Menu />} />
           <Route path="/Review" element={<Review />} />
           <Route path="/About" element={<About />} />
-          <Route path="/LoginPage" element={<LoginPage />} />
-          <Route path="/RegisterPage" element={<RegisterPage />} />
-          <Route path="/Order" element={<Order />} />
           <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>

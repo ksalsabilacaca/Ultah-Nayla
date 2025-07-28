@@ -1,13 +1,13 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import Tahu2 from '../assets/Tahu2.jpg'; 
+import home from '../assets/home.jpg'; 
 
 const About = () => {
   const navigate = useNavigate();
   return (
     <div
       className="relative h-screen w-screen bg-cover bg-center backdrop-blur-full"
-      style={{ backgroundImage: `url(${Tahu2})` }}>
+      style={{ backgroundImage: `url(${home})` }}>
 
         {/* Paragraf About Us */}
         <div className="absolute inset-40 bg-white bg-opacity-70 backdrop-blur-full rounded-full justify-center items-center">
