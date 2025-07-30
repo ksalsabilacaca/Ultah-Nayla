@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home"; 
-import Menu from "./pages/Menu";
-import Review from "./pages/Review";
+import Message from "./pages/Message";
+import Notes from "./pages/Notes";
 import NoPage from "./pages/NoPage";
-import About from "./pages/About";
+import Love from "./pages/Love";
+import Friendship from "./pages/Friendship";
 
 const App = () => {
   return (
@@ -12,9 +13,10 @@ const App = () => {
           <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
-          <Route path="/Menu" element={<Menu />} />
-          <Route path="/Review" element={<Review />} />
-          <Route path="/About" element={<About />} />
+          <Route path="/Message" element={<Message />} />
+          <Route path="/Notes" element={<Notes />} />
+          <Route path="/Love" element={<Love />} />
+          <Route path="/Friendship" element={<Friendship />} />
           <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>

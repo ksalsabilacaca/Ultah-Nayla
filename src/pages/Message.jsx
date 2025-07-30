@@ -6,9 +6,9 @@ import kucingatas from '../assets/kucingatas.png';
 import React, { useEffect } from "react";
 import confetti from "canvas-confetti";
 
-export default function Menu() {
+export default function Message() {
   const navigate = useNavigate();
-  const gdriveUrl = "https://drive.google.com/file/d/19kKWG9tVttb5vYxOlX8ezAp9NJG0hbGh/view?usp=drive_link";
+  const gdriveUrl = "https://drive.google.com/file/d/1KPSdGNeYOhqU4uZkTXWW9DcpcskjRkEP/view?usp=sharing";
 
  useEffect(() => {
   // confetti besar sekali di awal
@@ -69,13 +69,13 @@ export default function Menu() {
         <button onClick={() => navigate('/home')} className="text-white mx-6 hover:text-xl">
           Home
         </button>
-        <button onClick={() => navigate('/about')} className="text-pink-700 mx-6 hover:text-xl">
+        <button onClick={() => navigate('/Love')} className="text-pink-700 mx-6 hover:text-xl">
           Love
         </button>
-        <button onClick={() => navigate('/LoginPage')} className="text-white mx-6 hover:text-xl">
+        <button onClick={() => navigate('/Friendship')} className="text-white mx-6 hover:text-xl">
           Friendship
         </button>
-        <button onClick={() => navigate('/review')} className="text-pink-700 mx-6 hover:text-xl">
+        <button onClick={() => navigate('/Notes')} className="text-pink-700 mx-6 hover:text-xl">
           Notes
         </button>
       </div>
@@ -85,7 +85,7 @@ export default function Menu() {
       <img
       src={fotonay}
       alt="fotonay"
-      className="w-[23rem] h-[23rem] object-cover rounded-full absolute top-[4cm] left-[5cm]"/>
+      className="w-[23rem] h-[23rem] object-cover rounded-full absolute top-[4cm] left-[5cm] hover:scale-105 hover:shadow-2xl transition-transform duration-300"/>
       <img src={pita} alt="pita" className="w-[7rem] h-[7rem] absolute top-[12.3cm] left-[8.2cm]"/>
       <img src={kucingbawah} alt="kucingbawah" className="w-[11rem] h-[18rem] absolute top-[13cm] left-[1.5cm]"
       style={{

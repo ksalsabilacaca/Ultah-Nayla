@@ -5,7 +5,7 @@ import home from '../assets/home.jpg';
 const Home = () => {
   const navigate = useNavigate();
   const handleMenu = () => {
-    navigate('/Menu');
+    navigate('/Message');
   }
 
   return (
@@ -20,13 +20,13 @@ const Home = () => {
         <button onClick={() => navigate('/home')} className="text-white mx-6 hover:text-xl">
           Home
         </button>
-        <button onClick={() => navigate('/about')} className="text-pink-300 mx-6 hover:text-xl">
+        <button onClick={() => navigate('/Love')} className="text-pink-300 mx-6 hover:text-xl">
           Love
         </button>
-        <button onClick={() => navigate('/LoginPage')} className="text-white mx-6 hover:text-xl">
+        <button onClick={() => navigate('/Friendship')} className="text-white mx-6 hover:text-xl">
           Friendship
         </button>
-        <button onClick={() => navigate('/review')} className="text-pink-300 mx-6 hover:text-xl">
+        <button onClick={() => navigate('/Notes')} className="text-pink-300 mx-6 hover:text-xl">
           Notes
         </button>
       </div>
